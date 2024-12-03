@@ -15,6 +15,7 @@ COPY . /usr/src/app
 WORKDIR /usr/src/app
 
 # Install dependencies from package.json
+RUN npm config set proxy http://proxy.tcmb.gov.tr
 RUN npm install
 
 # Command for container to execute
