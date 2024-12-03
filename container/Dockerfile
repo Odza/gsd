@@ -16,7 +16,7 @@ WORKDIR /usr/src/app
 
 # Install dependencies from package.json
 RUN npm config set proxy http://proxy.tcmb.gov.tr:8080
-RUN npm install  --registry=https://registry.npmjs.com/
+RUN npm install --registry=https://registry.npmjs.com/
 
 # Command for container to execute
 ENTRYPOINT [ "node", "app.js" ]
